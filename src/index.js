@@ -13,8 +13,8 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-import Apppzzzzz from "./components/App";
+import App from "./components/App";
 
 const root = document.getElementById("root");
 
-ReactDOM.render(<Apppzzzzz />, root);
+ReactDOM.render(<App />, root);
