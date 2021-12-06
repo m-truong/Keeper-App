@@ -1,23 +1,18 @@
-import React from "react";
+import React, { useState, useContext, useForm } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
-import notes from "../notes";
+import CreateArea from "./CreateArea";
 
-const createNote = (note) => {
+function App() {
   return (
-    <Note key={note.key} title={note.title} content={note.content} />
+    <div>
+      <Header />
+      <CreateArea />
+      <Note key={1} title="Note title" content="Note content" />
+      <Footer />
+    </div>
   );
 }
-
-const App = () => {
-  return (
-    <>
-    <Header/>
-    {notes.map(createNote)}
-    <Footer/>
-     </>
-  )
-  };
 
 export default App;
