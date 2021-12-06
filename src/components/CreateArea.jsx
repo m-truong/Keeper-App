@@ -3,7 +3,7 @@ import React from "react";
 function CreateArea({ title, content, handleInputChange, handleSubmit }) {
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form className="create-note" onSubmit={handleSubmit}>
                 <input
                     name="title"
                     placeholder="Title"
