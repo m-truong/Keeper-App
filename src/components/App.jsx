@@ -48,8 +48,14 @@ function App() {
     e.preventDefault();
   }
 
-  const handleDelete = (e) => {
+  const handleDelete = (id) => {
     cl(`Does this occur?`)
+    setNotesList( () => {
+      return notesList.filter((note, index) => {
+        return index !== id;
+      })
+    })
+
     
   }
   return (
@@ -60,7 +66,7 @@ function App() {
         content={textData.content}
         handleInputChange={handleInputChange}
         handleSubmit={handleSubmit} />
-      {notesList.map((currNote, index) => (<Note handleDelete={handleDelete} key={1} title={currNote.title} content={currNote.content} />))}
+      {notesList.map((currNote, index) => (<Note handleDelete={handleDelete} key={index} id={index} title={currNote.title} content={currNote.content} />))}
       <Footer />
     </div>
   );
