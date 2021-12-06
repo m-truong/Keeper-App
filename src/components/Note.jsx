@@ -1,4 +1,5 @@
 import React from "react";
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
 function Note({handleDelete, key, id, title, content}) {
   return (
