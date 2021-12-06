@@ -6,7 +6,7 @@ function Note({handleDelete, key, id, title, content}) {
     <div className="note">
       <h1>{title}</h1>
       <p>{content}</p>
-      <button onClick={() => handleDelete(id)}>DELETE</button>
+      <button onClick={() => handleDelete(id)}><DeleteForeverIcon/></button>
     </div>
   );
 }
