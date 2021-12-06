@@ -1,10 +1,10 @@
 import React from "react";
 
-function Note({handleDelete}) {
+function Note({handleDelete, key, title, content}) {
   return (
     <div className="note">
-      <h1>{props.title}</h1>
-      <p>{props.content}</p>
+      <h1>{title}</h1>
+      <p>{content}</p>
       <button onClick={handleDelete}>DELETE</button>
     </div>
   );

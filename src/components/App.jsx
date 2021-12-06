@@ -60,7 +60,7 @@ function App() {
         content={textData.content}
         handleInputChange={handleInputChange}
         handleSubmit={handleSubmit} />
-      <Note handleDelete={handleDelete} key={1} title="Note title" content="Note content" />
+      {notesList.map((currNote, index) => (<Note handleDelete={handleDelete} key={1} title={currNote.title} content={currNote.content} />))}
       <Footer />
     </div>
   );
